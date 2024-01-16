@@ -1,0 +1,1 @@
+This is a Image Gallery that uses Horizontal Scrolling Using JavaScript
