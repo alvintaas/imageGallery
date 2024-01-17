@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>imageGallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="gallery-wrap"><img src="images/back.png" alt="back-Btn" id="backBtn">
+        <div class="gallery">
+            <div>
+                <span><img src="images/214308568_4450082405023796_8472563237054457253_n.jpg"
+                        alt="alvin_climbing"></span>
+                <span><img src="images/217815205_4450082048357165_1997123819607693787_n.jpg"
+                        alt="alvin_climbing"></span>
+                <span><img src="images/218307536_4450076821691021_1450440502930273753_n.jpg"
+                        alt="alvin_climbing"></span>
+            </div>
+            <div>
+                <span><img src="images/BoulderComp-112.jpg" alt="alvin_climbing"></span>
+                <span><img src="images/BoulderComp-117.jpg" alt="alvin_climbing"></span>
+            </div>
+        </div>
+        <img src="images/next.png" alt="next-Btn" id="nextBtn">
+    </div>
+
+    <script>
+
+        let scrollContainer = document.querySelector(".gallery");
+        let backBtn = document.getElementById("backBtn");
+        let nextBtn = document.getElementById("nextBtn");
+
+        scrollContainer.addEventListener("wheel", (evt) => {
+            evt.preventDefault();
+            // prevents default scroll wheel to occur
+            scrollContainer.scrollLeft += evt.deltaY;
+            scrollContainer.style.scrollBehavior = "auto";
+        });
+
+        nextBtn.addEventListener("click", () => {
+            scrollContainer.style.scrollBehavior = "smooth";
+            scrollContainer.scrollLeft += 600;
+        });
+
+        backBtn.addEventListener("click", () => {
+            scrollContainer.style.scrollBehavior = "smooth";
+            scrollContainer.scrollLeft -= 600;
+        });
+
+    </script>
+
+</body>
+
+</html>

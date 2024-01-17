@@ -1,1 +1,1 @@
-This is a Image Gallery that uses Horizontal Scrolling Using JavaScript
+This is a Image Gallery that uses horizontal scrolling using JavaScript
